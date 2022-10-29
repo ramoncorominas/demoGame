@@ -1,3 +1,10 @@
+import debugpy
+debugpy.log_to("./logdebugpy")
+print("Starting debugger...")
+debugpy.listen(("0.0.0.0", 2633))
+debugpy.wait_for_client()
+
+
 import os
 import random
 from settings import MIN_NUMBER, MAX_NUMBER, MAX_TRIES
